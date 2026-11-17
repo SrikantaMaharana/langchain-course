@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Srikanta Maharana — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:    #0d0d0d;
+    --dark:   #1c1c1c;
+    --mid:    #3a3a3a;
+    --muted:  #5a5a5a;
+    --light:  #888888;
+    --faint:  #b0b0b0;
+    --border: #cccccc;
+    --strip:  #f4f4f4;
+    --bg:     #dcdcdc;
+    --white:  #ffffff;
+  }
+
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--mid);
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .page {
+    max-width: 840px;
+    margin: 28px auto;
+    background: var(--white);
+    padding: 36px 52px 44px;
+    box-shadow: 0 4px 28px rgba(0,0,0,0.14);
+  }
+
+  /* ════════════════════════
+     HEADER
+  ════════════════════════ */
+
+  .header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .header-name {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+    line-height: 1.0;
+    margin-bottom: 4px;
+  }
+
+  .header-title {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 12.5px;
+    font-weight: 300;
+    color: var(--muted);
+    letter-spacing: 0.3px;
+    text-transform: none;
+    margin-bottom: 7px;
+  }
+
+  /* contact row centered */
+  .header-contact {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 11.5px;
+    font-weight: 400;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .header-contact a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .header-contact a:hover {
+    color: var(--dark);
+    text-decoration: underline;
+  }
+
+  /* thin separator under header */
+  .header-rule {
+    border: none;
+    border-top: 1.5px solid var(--ink);
+    margin: 8px 0 0;
+  }
+
+  /* stats bar — bordered row */
+  .header-stats {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--light);
+    letter-spacing: 0.4px;
+    padding: 4px 0 3px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+
+  /* ════════════════════════
+     SECTION HEADINGS
+  ════════════════════════ */
+
+  .section {
+    margin-top: 13px;
+  }
+
+  h2 {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+    border-bottom: 2px solid var(--dark);
+    padding-bottom: 3px;
+    margin-bottom: 7px;
+  }
+
+  /* ════════════════════════
+     PROFILE
+  ════════════════════════ */
+
+  .profile-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--mid);
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  /* ════════════════════════
+     KEY ACHIEVEMENTS
+  ════════════════════════ */
+
+  .achievement-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .achievement-list li {
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.45;
+    padding: 3px 0;
+    text-align: justify;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .achievement-list li:last-child { border-bottom: none; }
+
+  /* achievement section label box */
+  .ach-label {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 10.5px;
+    letter-spacing: 0.8px;
+    color: var(--dark);
+    background: #e2e2e2;
+    border: 1px solid #999999;
+    display: inline-block;
+    padding: 1px 7px 2px;
+    margin-right: 7px;
+    vertical-align: middle;
+  }
+
+  /* inline key-term highlight within bullets */
+  .hl {
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  /* ════════════════════════
+     PEER RECOGNITION
+  ════════════════════════ */
+
+  .recognition-intro {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 4px;
+  }
+
+  .recognition-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .recognition-list li {
+    font-size: 12px;
+    color: var(--muted);
+    padding: 1px 0 1px 16px;
+    position: relative;
+    text-align: justify;
+    line-height: 1.45;
+  }
+
+  .recognition-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--faint);
+    font-size: 11px;
+    top: 4px;
+  }
+
+  /* ════════════════════════
+     EXPERIENCE  (Chetana: role | company + right-aligned date)
+  ════════════════════════ */
+
+  .employer-block {
+    margin-bottom: 13px;
+  }
+
+  /* employer name row */
+  .employer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+
+  .employer-name {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .employer-type {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 10.5px;
+    color: var(--light);
+    margin-left: 6px;
+  }
+
+  .employer-dates {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 10.5px;
+    font-style: italic;
+    color: var(--light);
+    white-space: nowrap;
+  }
+
+  .employer-location {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 10.5px;
+    color: var(--faint);
+    font-style: italic;
+    margin-bottom: 4px;
+  }
+  /* individual role row */
+  .role-block {
+    margin-bottom: 7px;
+  }
+
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+
+  .role-title {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .role-dates {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 10px;
+    font-style: italic;
+    color: var(--light);
+    white-space: nowrap;
+  }
+
+  /* project sub-label */
+  .project-label {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--muted);
+    margin: 3px 0 2px 0;
+  }
+
+  .bullet-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .bullet-list li {
+    font-size: 12px;
+    color: var(--muted);
+    padding: 1px 0 1px 14px;
+    position: relative;
+    text-align: justify;
+    line-height: 1.45;
+  }
+
+  .bullet-list li::before {
+    content: '•';
+    position: absolute;
+    left: 2px;
+    color: var(--border);
+    font-size: 12px;
+    top: 1px;
+    line-height: 1.55;
+  }
+
+  /* ════════════════════════
+     SKILLS  (Chetana: bold-label inline — far more compact)
+  ════════════════════════ */
+
+  .skill-line {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    color: var(--mid);
+    margin-bottom: 2px;
+    line-height: 1.45;
+    text-align: justify;
+  }
+
+  .skill-cat {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 11.5px;
+    color: var(--dark);
+    margin-right: 2px;
+  }
+
+  /* ════════════════════════
+     CERTIFICATIONS
+  ════════════════════════ */
+
+  .cert-list { list-style: none; padding: 0; }
+
+  .cert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 3px 0;
+    border-bottom: 1px solid #ebebeb;
+    gap: 14px;
+  }
+
+  .cert-item:last-child { border-bottom: none; }
+
+  .cert-info { flex: 1; min-width: 0; }
+
+  .cert-name {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .cert-issuer {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 10.5px;
+    color: var(--light);
+    margin-left: 7px;
+  }
+
+  .cert-link {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+  }
+
+  .cert-link:hover { color: var(--ink); text-decoration: underline; }
+
+  .cert-status {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 10px;
+    color: var(--faint);
+    font-style: italic;
+    white-space: nowrap;
+  }
+
+  /* ════════════════════════
+     PUBLICATIONS
+  ════════════════════════ */
+
+  .pub-title {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .pub-meta {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 11px;
+    color: var(--light);
+    margin-top: 2px;
+  }
+
+  .pub-meta a { color: var(--muted); text-decoration: none; }
+  .pub-meta a:hover { text-decoration: underline; }
+
+  /* ════════════════════════
+     EDUCATION  (Chetana: one-liner per entry)
+  ════════════════════════ */
+
+  .edu-list { list-style: none; padding: 0; }
+
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 3px 0;
+    border-bottom: 1px solid #ebebeb;
+    gap: 14px;
+  }
+
+  .edu-item:last-child { border-bottom: none; }
+
+  .edu-degree {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .edu-institution {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  .edu-right { text-align: right; white-space: nowrap; flex-shrink: 0; }
+
+  .edu-year {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 10px;
+    color: var(--light);
+  }
+
+  .edu-grade {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  /* ════════════════════════
+     LANGUAGES
+  ════════════════════════ */
+
+  .languages-row {
+    font-family: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+    color: var(--mid);
+  }
+
+  /* ════════════════════════
+     PRINT
+  ════════════════════════ */
+
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; margin: 0; padding: 28px 40px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── HEADER ── -->
+  <div class="header">
+    <div class="header-name">Srikanta Maharana</div>
+    <div class="header-title">SAP ABAP Consultant | S/4HANA Cloud | Product Development &amp; Consulting</div>
+    <div class="header-contact">
+      Bangalore, Karnataka, India &nbsp;|&nbsp;
+      +91 95836 11181 &nbsp;|&nbsp;
+      srikantammaharana@gmail.com &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/srikantamaharana/" target="_blank">linkedin.com/in/srikantamaharana</a>
+    </div>
+  </div>
+  <hr class="header-rule">
+  <div class="header-stats">
+    8+ yrs experience &nbsp;·&nbsp; 6 projects &nbsp;·&nbsp; 3 S/4HANA cloud releases &nbsp;·&nbsp; 12 peer recognitions (8× SAP · 4× TCS) &nbsp;·&nbsp; 1 publication
+  </div>
+
+  <!-- ── SUMMARY ── -->
+  <div class="section">
+    <h2>Summary</h2>
+    <p class="profile-text">
+      SAP ABAP Consultant at SAP SE · SAP Labs — with 8+ years of hands-on experience across both sides of the SAP ecosystem: product development (contributing to S/4HANA Public Cloud releases 2508, 2608, 2702 as part of the FSA Integration team) and end-to-end consulting delivery across Manufacturing, Retail, Oil &amp; Gas, and Infrastructure — consistently contributing across large cross-functional SAP India programmes (24–69 team members) within strict time-bound delivery standards, from Blueprint through Go-Live and Hypercare. Over this journey, grown into a technical lead role — driving workstream delivery, mentoring developers, and establishing peer code review standards that raise team quality. Specialising in modern ABAP Cloud: RAP (behavior definitions, draft handling, late numbering, side effects, fine-grained authorization), CDS-based data modelling, Fiori Elements, and BTP extensibility (Steampunk / Embedded Steampunk). Known across teams for knowledge-sharing and going beyond individual deliverables to keep releases on track — consistently recognised by colleagues for both technical depth and collaborative mindset. Currently transitioning into AI-augmented SAP development: upskilling in Python, LangChain, agentic frameworks, and SAP Joule extensibility.
+    </p>
+  </div>
+
+  <!-- ── KEY ACHIEVEMENTS ── -->
+  <div class="section">
+    <h2>Key Achievements</h2>
+    <ul class="achievement-list">
+      <li>
+        <span class="ach-label">S/4HANA CLOUD 2702</span> Contributing to delivery of Product, Product Pricelist and Product Stock integration between S/4HANA Public Cloud and SAP FSA — event-driven, async architecture using RAP Event Handler + OData Client Proxy. (Pre-release)
+      </li>
+      <li>
+        <span class="ach-label">S/4HANA CLOUD 2608</span> Delivered <span class="hl">Smartform Instance Viewer</span> and <span class="hl">Smartform Template Viewer</span> as production Fiori applications on S/4HANA Public Cloud, shipped to customers in release 2608. S/4HANA Public Cloud users have no SAP GUI access — without these apps, FSA Smartform and checklist data was entirely invisible to end users, making the Smartform workflow ineffective. Authored the official <a href="https://community.sap.com/t5/supply-chain-management-blog-posts-by-sap/smartform-viewer-apps-for-s-4hana-public-cloud-bringing-fsa-checklist-data/ba-p/14426424" target="_blank" style="color:var(--muted);">SAP Community blog post</a> documenting the feature.
+      </li>
+      <li>
+        <span class="ach-label">S/4HANA CLOUD 2508</span> Contributed to delivering the Smartform RAP API for S/4HANA – FSA Integration — part of the team shipping one of the first clean-core, cloud-grade form-generation APIs on the Public Cloud edition.
+      </li>
+      <li>
+        <span class="ach-label">ABAP WORKSTREAM LEAD</span> Led the TM ABAP workstream on a 19-month Retail industry greenfield implementation — managing a team of 3 (self + 2 developers), owning all Transportation Management ABAP development end-to-end across design, build, QA, and go-live.
+      </li>
+      <li>
+        <span class="ach-label">SAP STANDARD CONTENT</span> Delivered SAP Standard Content 2021 Edition across Oil &amp; Gas, Chemical, Milk Products, Mills, Connected Assets, SCE.
+      </li>
+    </ul>
+  </div>
+
+  <!-- ── EXPERIENCE ── -->
+  <div class="section">
+    <h2>Experience</h2>
+
+    <!-- SAP -->
+    <div class="employer-block">
+      <div class="employer-header">
+        <span class="employer-name">SAP <span class="employer-type">Full-time</span></span>
+        <span class="employer-dates">Apr 2021 – Present · 5 yrs 4 mos</span>
+      </div>
+      <div class="employer-location">Bangalore Urban, Karnataka, India</div>
+
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Development Consultant</span>
+          <span class="role-dates">Apr 2024 – Present · 2 yrs 8 mos</span>
+        </div>
+
+        <div class="project-label">SAP Labs · S/4HANA Public Cloud – FSA Integration · Mar 2025 – Present · Team: 12 ABAP + 2 CPI</div>
+        <ul class="bullet-list">
+          <li>Key contributor across S/4HANA Public Cloud releases <span class="hl">2508, 2608 and 2702</span> (pre-release).</li>
+          <li>Contributed to delivering the <span class="hl">Smartform RAP API</span> (Release 2508) — a cloud-grade RESTful API for form generation, leveraging ABAP Cloud extensibility and shipped to customers.</li>
+          <li>Contributed to delivering <span class="hl">Smartform Instance Viewer</span> and <span class="hl">Smartform Template Viewer</span> Fiori applications (Release 2608) — the only access point for Public Cloud customers to view Smartform and FSA checklist data, as SAP GUI is unavailable in cloud deployments; worked end-to-end from RAP service design to Fiori Elements UI, shipped to customers.</li>
+          <li>Currently developing <span class="hl">Product, Product Pricelist and Product Stock integrations</span> (Release 2702) — event-driven architecture using RAP Event Handler to consume S/4HANA business events and trigger FSA APIs asynchronously via OData Client Proxy (background RFC / qRFC).</li>
+          <li>Collaborated with the team to design the async integration pattern: RAP behavior event publishing → event consumer registration → OData Client Proxy generation → error handling and retry strategy.</li>
+          <li>Authored <span class="hl">ABAP Unit Test classes using Claude Code</span> (AI-assisted development) — leveraging LLM assistance to accelerate test class creation and improve coverage for RAP handler logic.</li>
+          <li>Created <span class="hl">SAP Support Notes (SNotes)</span> for Private Cloud and On-Premise customers — enabling the same FSA integration enhancements to be delivered outside the Public Cloud edition.</li>
+        </ul>
+
+        <div class="project-label">Retail Industry · Green Field Implementation · 19 months · Team: 6 ABAP, 15 Functional, 3 BASIS/GRC</div>
+        <ul class="bullet-list">
+          <li>Led the <span class="hl">TM ABAP workstream</span> as team lead — managing 2 developers, responsible for all Transportation Management ABAP development end-to-end, collaborating closely with functional consultants and project stakeholders across design, build, QA, and go-live.</li>
+          <li>Architected and delivered complex <span class="hl">RAP-based transactional applications</span> with Fiori Elements UIs, handling behavior projections and draft states.</li>
+          <li>Developed high-complexity <span class="hl">BOPF business objects</span> — determinations, validations, actions, and node-level lock handling.</li>
+          <li>Led <span class="hl">OData V4 service provisioning</span> via RAP; authored CDS projection views with DCL-based access controls.</li>
+          <li>Served as QC reviewer for peer development objects, enforcing ABAP Clean Core guidelines and documentation quality.</li>
+          <li>Contributed reusable patterns and best practices to the team's knowledge-management tool.</li>
+          <li>Travelled <span class="hl">onsite to the Netherlands</span> to provide hypercare support during go-live, ensuring critical TM processes were stable and issues resolved in real time.</li>
+        </ul>
+
+        <div class="project-label">Manufacturing Industry · Green Field Implementation · 4 months · Team: 12 ABAP, 20 Functional, 2 BASIS, 2 GRC</div>
+        <ul class="bullet-list">
+          <li>Implemented <span class="hl">Custom Business Configuration (CBC)</span> objects for cloud-ready enterprise configuration across <span class="hl">SD, MM, and EAM</span> scenarios.</li>
+          <li>Built end-to-end RAP transactional apps — strictly adhering to <span class="hl">Clean Core principles</span>, cloud BADIs and whitelisted APIs.</li>
+          <li>Designed <span class="hl">custom flexible workflow for SD Billing Document approval</span> — multi-level approvers, deadline monitoring, email notifications.</li>
+          <li>Contributed to EAM module delivery alongside the broader ABAP team.</li>
+        </ul>
+      </div>
+
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Development Associate Consultant</span>
+          <span class="role-dates">Aug 2021 – Mar 2024 · 2 yrs 8 mos</span>
+        </div>
+
+        <div class="project-label">Manufacturing Industry · Green Field Implementation · 10 months · Team: 30 ABAP (12 SAP + 18 Partner), 30 Functional, 5 BASIS, 4 PMs</div>
+        <ul class="bullet-list">
+          <li>Collaborated with functional consultants to build <span class="hl">RAP-based apps</span> with full behavior definition lifecycle (managed, unmanaged, draft) on S/4HANA — spanning <span class="hl">SD, MM, and PP</span> module scenarios.</li>
+          <li>Authored <span class="hl">CDS analytical/transactional views</span> and DCLs; applied CDS annotations for Fiori Elements rendering.</li>
+          <li>Designed and provisioned <span class="hl">OData V2/V4 services</span> for enterprise API consumption.</li>
+          <li>Built <span class="hl">custom OData API with deep entity</span> for SD Delivery Split — complex parent-child payload in a single call.</li>
+          <li>Developed <span class="hl">Percentage of Completion (POC)</span> enhancement in CO module.</li>
+        </ul>
+
+        <div class="project-label">Oil &amp; Gas · Chemical · FMCG · Mills · Multi-LoB Build · 8 months</div>
+        <ul class="bullet-list">
+          <li>Delivered SAP Standard Content 2021 Edition across multiple industry verticals.</li>
+          <li>Managed Business Function activation, BC Sets creation/activation across landscapes.</li>
+          <li>Implemented solution builder; managed CTS transports across dev/QA/prod.</li>
+          <li>Mentored junior colleagues on build methodology and transport management.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TCS -->
+    <div class="employer-block">
+      <div class="employer-header">
+        <span class="employer-name">Tata Consultancy Services (TCS) <span class="employer-type">Full-time</span></span>
+        <span class="employer-dates">Jul 2018 – Aug 2021 · 3 yrs 2 mos</span>
+      </div>
+      <div class="employer-location">Gandhinagar, Gujarat, India</div>
+
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">System Engineer</span>
+          <span class="role-dates">Aug 2020 – Aug 2021 · 1 yr 1 mo</span>
+        </div>
+        <div class="project-label">Infrastructure · Application Support | Airport Services · E-Invoicing · SIP Automation</div>
+        <ul class="bullet-list">
+          <li>Developed <span class="hl">fully automated efforts log</span> using Module Pool Programming, eliminating manual employee effort tracking.</li>
+          <li>Delivered <span class="hl">SIP (System Improvement Plan) automation</span> — 4 Module Pool programs and 5+ Interactive Adobe Forms for a structured improvement workflow.</li>
+          <li>Implemented <span class="hl">digital-signature solutions</span> for FI, MM, SD invoice Smartforms using consumer-proxy web services (e-Mudhra integration).</li>
+          <li>Built <span class="hl">ASK EHS REST/SOAP consumer proxy</span> interface for automated PM notification creation.</li>
+          <li>Applied e-invoicing compliance notes; built custom <span class="hl">ALV upload-template report</span> for Airport Services.</li>
+          <li>Managed system patch upgrades: resolved <span class="hl">SPAU/SPAU_ENH/SPDD adjustments</span>.</li>
+          <li>Worked on <span class="hl">Persistent Object Services</span> for runtime data persistence and DB table updates.</li>
+        </ul>
+      </div>
+
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Assistant System Engineer</span>
+          <span class="role-dates">Aug 2019 – Jul 2020 · 1 yr</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Hands-on development across classic ABAP stack — <span class="hl">WRICEF</span> (Workflows, Reports, Interfaces, Conversions, Enhancements, Forms) and Smartforms.</li>
+          <li>Analysed requirements, designed technical solutions, and worked closely with client and project teams to ensure smooth delivery.</li>
+          <li>Shared technical knowledge with junior colleagues, contributing to team upskilling and consistent delivery quality.</li>
+        </ul>
+      </div>
+
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Assistant System Engineer Trainee</span>
+          <span class="role-dates">Jul 2018 – Jul 2019 · 1 yr 1 mo</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Completed structured ABAP training; onboarded to SAP development lifecycle and delivery standards.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TECHNICAL SKILLS  (Chetana: bold-label inline) ── -->
+  <div class="section">
+    <h2>Technical Skills</h2>
+    <p class="skill-line"><span class="skill-cat">AI &amp; Emerging Tech:</span> SAP Joule Extensibility, Claude Code (AI-assisted ABAP Dev &amp; Unit Test Generation), AI Inference APIs, Vector Retrieval (RAG), LangChain, LLM REST Integration</p>
+    <p style="font-family:'Source Sans 3','Source Sans Pro','Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:var(--faint);margin-top:1px;margin-bottom:3px;">Actively upskilling through structured coursework and hands-on projects — Python, LangChain, Agentic AI, SAP Joule Extensibility (in progress)</p>
+    <p class="skill-line"><span class="skill-cat">Backend &amp; APIs:</span> RAP Event Handler, OData Client Proxy, BTP ABAP (Steampunk), Embedded Steampunk, In-app Extensibility, RAP (Behavior Definitions), S/4HANA, BOPF, POWL, OData V2/V4, SOAP/REST</p>
+    <p class="skill-line"><span class="skill-cat">Data &amp; Modelling:</span> CDS Views, CDS Table Entity, CDS Simple Types</p>
+    <p class="skill-line"><span class="skill-cat">UI &amp; UX:</span> Fiori Elements, Metadata-driven UX</p>
+    <p class="skill-line"><span class="skill-cat">Integration &amp; Workflow:</span> Flexible Workflow, Consumer Proxy, OData V2/V4, iFlow Monitoring</p>
+    <p class="skill-line"><span class="skill-cat">Methodologies &amp; Tools:</span> SAP Activate, Agile/Scrum, Jira, Git, abapGit, SAP Solution Manager (ChaRM, Change Request Management)</p>
+    <p class="skill-line"><span class="skill-cat">ABAP Core:</span> Clean Core Principles, S/4HANA Public Cloud, ADT (Eclipse), ABAP Unit Testing, ABAP Test Doubles, ABAP OO, DCL (CDS Security), Authorization Objects, Enhancement Framework, BADIs/Exits, RFC/BAPI, SPAU/SPAU_ENH/SPDD</p>
+    <p class="skill-line"><span class="skill-cat">Forms &amp; Output:</span> Smartforms, Adobe Forms</p>
+    <p class="skill-line"><span class="skill-cat">Business Domains:</span> FSA, TM, EAM, SD, MM, PP, PM, QM, FICO</p>
+  </div>
+
+  <!-- ── CERTIFICATIONS ── -->
+  <div class="section">
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li class="cert-item">
+        <div class="cert-info">
+          <span class="cert-name">SAP Certified Associate – Back-End Developer – ABAP Cloud</span>
+          <span class="cert-issuer">SAP SE</span>
+        </div>
+        <a class="cert-link" href="https://www.credly.com/badges/26a034da-96b4-4d60-ba69-a150021e51c8" target="_blank">↗ Verify</a>
+      </li>
+      <li class="cert-item">
+        <div class="cert-info">
+          <span class="cert-name">SAP Certified Associate – SAP Fiori Application Developer</span>
+          <span class="cert-issuer">SAP SE</span>
+        </div>
+        <a class="cert-link" href="https://www.credly.com/badges/7afc025e-e8ee-40b8-bd90-aedca160dda9" target="_blank">↗ Verify</a>
+      </li>
+      <li class="cert-item">
+        <div class="cert-info">
+          <span class="cert-name">SAP Certified Development Associate – ABAP with SAP NetWeaver 7.50</span>
+          <span class="cert-issuer">SAP SE</span>
+        </div>
+        <span class="cert-status">Expired &nbsp;·&nbsp; <a class="cert-link" href="https://www.credly.com/badges/d7eff6f2-4f8e-458f-b0dd-ab7543df07e3/public_url" target="_blank">↗ Verify</a></span>
+      </li>
+      <li class="cert-item">
+        <div class="cert-info">
+          <span class="cert-name">SAP Certified Development Specialist – ABAP for SAP HANA 2.0</span>
+          <span class="cert-issuer">SAP SE</span>
+        </div>
+        <span class="cert-status">Expired &nbsp;·&nbsp; <a class="cert-link" href="https://www.credly.com/badges/32b33d5e-5caa-4d31-9d81-497e18b63062/public_url" target="_blank">↗ Verify</a></span>
+      </li>
+      <li class="cert-item">
+        <div class="cert-info">
+          <span class="cert-name">SAP Certified Development Associate – Developing Extensions Using SAP S/4HANA Cloud ABAP Environment</span>
+          <span class="cert-issuer">SAP SE</span>
+        </div>
+        <span class="cert-status">Expired &nbsp;·&nbsp; <a class="cert-link" href="https://www.credly.com/badges/262c3f45-7cb6-402e-b5ff-bfa3bc92a043/public_url" target="_blank">↗ Verify</a></span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ── AI ENABLEMENT ── -->
+  <div class="section">
+    <h2>AI Enablement &amp; Dev Skills</h2>
+    <p style="font-family:'Source Sans 3','Source Sans Pro','Segoe UI',Arial,sans-serif;font-size:10.5px;color:var(--faint);font-style:italic;margin-bottom:8px;">Earned through SAP company-initiated AI enablement program</p>
+    <ul class="cert-list">
+      <li class="cert-item">
+        <div class="cert-info">
+          <span class="cert-name">Joule Capability Developer</span>
+          <span class="cert-issuer">SAP SE</span>
+        </div>
+        <a class="cert-link" href="https://www.credly.com/badges/6d4e4156-7207-4381-a5a2-f9964aa934d6" target="_blank">↗ Verify</a>
+      </li>
+      <li class="cert-item">
+        <div class="cert-info">
+          <span class="cert-name">AI Developer Essentials</span>
+          <span class="cert-issuer">SAP SE</span>
+        </div>
+        <a class="cert-link" href="https://www.credly.com/badges/67142b2c-2b36-436b-9ab2-4028dfaf1002" target="_blank">↗ Verify</a>
+      </li>
+      <li class="cert-item">
+        <div class="cert-info">
+          <span class="cert-name">Intelligent Agent Developer</span>
+          <span class="cert-issuer">SAP SE</span>
+        </div>
+        <a class="cert-link" href="https://www.credly.com/badges/f9ec8cb3-f6c7-4ff2-8132-a76cb637bae7" target="_blank">↗ Verify</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ── PEER RECOGNITION ── -->
+  <div class="section">
+    <h2>Peer Recognition</h2>
+    <div class="recognition-intro">8× Recognised at SAP &nbsp;(Praise, Thank, and Celebrate awards) &nbsp;·&nbsp; 4× Recognised at TCS &nbsp;(On the Spot &amp; Star Team awards)</div>
+    <ul class="recognition-list">
+      <li><strong>Early impact:</strong> Received a Celebrate award within the first 50 days of joining the FSM-Integration team — cited for immediate technical contribution and ownership in a fast-moving cloud delivery environment.</li>
+      <li><strong>Showstopper resolution:</strong> Recognised for proactively identifying and resolving high-priority blockers ahead of release deadlines — praised specifically for keeping deliveries on track during critical S/4HANA Public Cloud release windows.</li>
+      <li><strong>Integration expertise:</strong> Called out by peers for exceptional contributions to the FSA integration domain — covering RAP Event Handler design, async OData Client Proxy patterns, and end-to-end API delivery.</li>
+      <li><strong>Quality and best practices:</strong> Consistently recognised for meticulous attention to detail, Clean Core adherence, and peer code reviews that raised team delivery standards.</li>
+      <li><strong>Scope beyond role:</strong> Praised for defect tracking, knowledge-sharing, and contributing reusable patterns to the team's knowledge-management tool — going beyond individual deliverables.</li>
+    </ul>
+  </div>
+
+  <!-- ── PUBLICATIONS ── -->
+  <div class="section">
+    <h2>Publications</h2>
+    <div class="pub-title">Smartform Viewer Apps for S/4HANA Public Cloud: Bringing FSA Checklist Data to Life</div>
+    <div class="pub-meta">
+      SAP Community &nbsp;·&nbsp; 2026 &nbsp;·&nbsp;
+      <a href="https://community.sap.com/t5/supply-chain-management-blog-posts-by-sap/smartform-viewer-apps-for-s-4hana-public-cloud-bringing-fsa-checklist-data/ba-p/14426424" target="_blank">↗ Read article</a>
+    </div>
+  </div>
+
+  <!-- ── EDUCATION ── -->
+  <div class="section">
+    <h2>Education</h2>
+    <ul class="edu-list">
+      <li class="edu-item">
+        <div>
+          <div class="edu-degree">B.Tech – Electrical Engineering</div>
+          <div class="edu-institution">Odisha University of Technology &amp; Research</div>
+        </div>
+        <div class="edu-right">
+          <div class="edu-year">May 2014 – May 2018</div>
+          <div class="edu-grade">CGPA 8.5 / 10</div>
+        </div>
+      </li>
+      <li class="edu-item">
+        <div>
+          <div class="edu-degree">Intermediate – Science</div>
+          <div class="edu-institution">Bhadrak Junior College</div>
+        </div>
+        <div class="edu-right">
+          <div class="edu-year">May 2012 – May 2014</div>
+          <div class="edu-grade">84.33%</div>
+        </div>
+      </li>
+      <li class="edu-item">
+        <div>
+          <div class="edu-degree">Matriculation</div>
+          <div class="edu-institution">Kolha High School</div>
+        </div>
+        <div class="edu-right">
+          <div class="edu-year">Jul 2009 – May 2012</div>
+          <div class="edu-grade">92.66%</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ── LANGUAGES ── -->
+  <div class="section">
+    <h2>Languages</h2>
+    <div class="languages-row">English (Professional) &nbsp;·&nbsp; Hindi (Fluent) &nbsp;·&nbsp; Odia (Native)</div>
+  </div>
+
+</div>
+</body>
+</html>
